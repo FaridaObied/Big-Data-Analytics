@@ -5,6 +5,11 @@ from collections import defaultdict
 
 # ── Phase 1 + 2: Map & Combine ────────────────────────────────────────────────
 
+def normalize(token: str) -> str:
+    """Lowercase a token and strip surrounding punctuation."""
+    return token.lower().strip(".,!?;:\"'()-")
+
+
 def map_fn(split_path: str) -> list[tuple[str, int]]:
     """
     Read one split (text file) and count every word locally.
@@ -15,7 +20,7 @@ def map_fn(split_path: str) -> list[tuple[str, int]]:
     with open(split_path, encoding="utf-8") as f:
         for line in f:
             for token in line.split():
-                word = token.lower().strip(".,!?;:\"'()-")
+                word = normalize(token)
                 if word:
                     local_counts[word] += 1
     return list(local_counts.items())
