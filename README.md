@@ -13,6 +13,8 @@ No Hadoop. No Spark. Every phase is hand-built.
 
 Comes with two ways to run it: a command-line tool and an interactive Streamlit dashboard.
 
+![Streamlit dashboard](docs/screenshot.png)
+
 ---
 
 ## Pipeline
