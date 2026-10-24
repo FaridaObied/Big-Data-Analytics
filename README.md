@@ -82,6 +82,8 @@ python main.py --input input/ --output output/ --reducers 2
 - **Partition lab:** type any word to see its ASCII codes, their sum, and the `mod` that picks its reducer.
 - **Run log:** the real time each phase took, in milliseconds.
 
+![Dashboard with two uploaded files and 3 reducers](docs/screenshot2.png)
+
 ---
 
 ## Example
